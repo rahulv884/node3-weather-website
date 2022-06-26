@@ -11,7 +11,6 @@ fetch('http://localhost:3000/weather?address=Indore').then((response) =>{
         }
     })
 })
-
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
 const msgFirst = document.querySelector('#message-1')
