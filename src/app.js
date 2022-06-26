@@ -53,7 +53,7 @@ app.get('/weather',(req,res) => {
             return res.send({error})
         }
         else{
-            forcast(longitude,latitude,(error,{Description,Temperature,Feelslike})=>{
+            forcast(longitude,latitude,(error,{Description,Temperature,Feelslike,Humidity})=>{
                 if(error)
                 {
                     return res.send({ error })
@@ -62,7 +62,8 @@ app.get('/weather',(req,res) => {
                     res.send({
                         forecast:Description,
                         location:location,
-                        address:req.query.address
+                        address:req.query.address,
+                        humidity:Humidity
                     })
                 }
             })
